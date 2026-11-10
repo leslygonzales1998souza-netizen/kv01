@@ -1,0 +1,388 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+body {
+    background: radial-gradient(circle at top, #16161a 0%, #0a0a0a 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ==========================================================================
+   COMPONENTES REUTILIZÁVEIS
+   ========================================================================== */
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title span {
+    color: #ff003c;
+    text-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+}
+
+.muted-text {
+    color: #88888b;
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #ff003c;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.4);
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff003c;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 28px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #cc0030;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 60, 0.4);
+}
+
+.btn.outline {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+
+.btn.outline:hover {
+    background-color: #ffffff;
+    color: #0a0a0a;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   CABEÇALHO / HERO
+   ========================================================================== */
+.hero {
+    padding: 100px 20px 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero h1 b {
+    color: #ff003c;
+    text-shadow: 0 0 20px rgba(255, 0, 60, 0.6);
+}
+
+.hero .sub {
+    font-size: 1.2rem;
+    color: #ced4da;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 35px;
+}
+
+.hero .btn {
+    margin: 8px;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* ==========================================================================
+   NAVEGAÇÃO
+   ========================================================================== */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(20, 20, 25, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    position: sticky;
+    top: 15px;
+    z-index: 100;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: #a0a0a5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    padding: 8px 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff003c;
+}
+
+/* ==========================================================================
+   SEÇÃO BIOGRAFIA & FOTO
+   ========================================================================== */
+.bio-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bio-photo-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.bio-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.bio-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.bio-content p {
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   SEÇÕES DE GRIDS (MÚSICAS E VÍDEOS)
+   ========================================================================== */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #121214;
+    border: 1px solid #1f1f23;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 0, 60, 0.3);
+}
+
+.card .num {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #ff003c;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.card p {
+    color: #88888b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Áudio & Vídeo Contêiners */
+audio {
+    width: 100%;
+    margin-top: auto;
+    border-radius: 4px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #1f1f23;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #ffffff;
+}
+
+.video-container {
+    margin: 15px 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+    display: flex;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.card .btn {
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 11px;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   SEÇÃO DE CONTATO
+   ========================================================================== */
+.contact {
+    background: linear-gradient(135deg, #121214 0%, #1a1a1e 100%);
+    border: 1px solid #1f1f23;
+    border-radius: 12px;
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: #ced4da;
+    margin-bottom: 30px;
+}
+
+.contact .btn {
+    margin: 8px;
+    width: 100%;
+    max-width: 220px;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #555559;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero .sub {
+        font-size: 1rem;
+    }
+    
+    nav {
+        padding: 8px;
+        width: 100%;
+    }
+    
+    nav a {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        letter-spacing: 0.5px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .contact .btn, .hero .btn {
+        max-width: 100%;
+    }
+    
+    .bio-content {
+        text-align: left;
+    }
+}
